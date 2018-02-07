@@ -1,24 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="BradleyHand-Bold.ttf">
+            <string>BradleyHandITCTT-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Output15" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gestures" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJ4-f8-P8L">
+                                <rect key="frame" x="16" y="65.5" width="343" height="60"/>
+                                <color key="backgroundColor" red="0.084859717561488565" green="0.13207793058747608" blue="0.28220177664974622" alpha="0.56592465753424659" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="vrA-5N-3jJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="29"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paper" translatesAutoresizingMaskIntoConstraints="NO" id="2RL-o2-khj">
+                                <rect key="frame" x="27.5" y="173.5" width="320" height="433.5"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="lUk-tL-TIE"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Uv6-4B-x7p" appends="YES" id="YNj-a7-ADN"/>
+                                    <outletCollection property="gestureRecognizers" destination="aea-LL-EHK" appends="YES" id="f5C-C3-P7u"/>
+                                    <outletCollection property="gestureRecognizers" destination="8e9-9j-ufq" appends="YES" id="QV0-mw-iHy"/>
+                                    <outletCollection property="gestureRecognizers" destination="ztY-eU-L3e" appends="YES" id="aLT-rz-Kx6"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make gestures on the sheet below" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WhG-jL-HXw">
+                                <rect key="frame" x="16" y="145.5" width="343" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="Zh5-k7-16f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2RL-o2-khj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cy9-l1-sb0"/>
+                            <constraint firstItem="2RL-o2-khj" firstAttribute="top" secondItem="WhG-jL-HXw" secondAttribute="bottom" id="EDI-iF-Bpj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WhG-jL-HXw" secondAttribute="trailing" constant="16" id="K3e-HU-lcf"/>
+                            <constraint firstItem="uJ4-f8-P8L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="YFR-nK-H1x"/>
+                            <constraint firstItem="WhG-jL-HXw" firstAttribute="top" secondItem="uJ4-f8-P8L" secondAttribute="bottom" constant="20" id="a5c-kv-QU1"/>
+                            <constraint firstItem="uJ4-f8-P8L" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="46" id="dWd-Kd-K7o"/>
+                            <constraint firstItem="WhG-jL-HXw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="jz6-Jx-IJH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2RL-o2-khj" secondAttribute="bottom" constant="60" id="ktT-28-pR2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uJ4-f8-P8L" secondAttribute="trailing" constant="16" id="wNR-8n-4oh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="gestureSheet" destination="2RL-o2-khj" id="eP7-Q6-9at"/>
+                        <outlet property="gestureTypeLabel" destination="uJ4-f8-P8L" id="MsR-dy-fPR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="Uv6-4B-x7p">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="name" value="swipeRight"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="gestureDetectedWithRecognizer:" destination="BYZ-38-t0r" id="zBg-Ry-P4n"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="aea-LL-EHK">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="name" value="swipeLeft"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="gestureDetectedWithRecognizer:" destination="BYZ-38-t0r" id="JKF-ep-yaS"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="ztY-eU-L3e">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="name" value="swipeUp"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="gestureDetectedWithRecognizer:" destination="BYZ-38-t0r" id="hoJ-oO-gtC"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="8e9-9j-ufq">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="name" value="swipeDown"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="gestureDetectedWithRecognizer:" destination="BYZ-38-t0r" id="XGB-Uj-ind"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="paper" width="852" height="480"/>
+    </resources>
 </document>
